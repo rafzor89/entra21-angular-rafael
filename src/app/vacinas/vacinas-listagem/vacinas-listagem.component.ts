@@ -1,19 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Vacina } from './../../shared/app-material/model/vacina';
+import { VacinasService } from '../../shared/service/vacinas.service';
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
 
-const VACINAS_MOCK: Vacina[] = [
-  {id: 1, paisOrigem: 'Brasil'},
-  {id: 2, paisOrigem: 'Argentina'},
-  {id: 3, paisOrigem: 'Paraguai'},
-  {id: 4, paisOrigem: 'Chile'}
-
-];
 
 @Component({
   selector: 'app-vacinas-listagem',
@@ -23,11 +12,23 @@ const VACINAS_MOCK: Vacina[] = [
 export class VacinasListagemComponent implements OnInit {
 
   displayedColumns: string[] = ['id', 'paisOrigem'];
-  dataSource = VACINAS_MOCK;
-  clickedRows = new Set<PeriodicElement>();
-  constructor() { }
+  public dataSource: Array<Vacina> = new Array();
+
+  constructor(private vacinasService: VacinasService) { }
 
   ngOnInit(): void {
+    this.buscarVacinas();
+  }
+
+  private buscarVacinas(){
+    this.vacinasService.listarTodas().subscribe(
+      resultado => {
+        this.dataSource = resultado;
+      },
+      erro => {
+        console.log("DEU ERRO. Causa: " + erro);
+      }
+    )
   }
 
 }

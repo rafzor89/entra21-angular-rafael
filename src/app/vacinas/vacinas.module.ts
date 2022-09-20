@@ -1,3 +1,4 @@
+import { AppMaterialModule } from './../shared/app-material/app-material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -12,7 +13,8 @@ import { MatTableModule } from '@angular/material/table';
   imports: [
     CommonModule,
     VacinasRoutingModule,
-    MatTableModule
+    MatTableModule,
+    AppMaterialModule
   ]
 })
 export class VacinasModule { }
