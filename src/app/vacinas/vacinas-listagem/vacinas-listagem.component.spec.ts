@@ -1,18 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { VacinaListagemComponent } from './vacinas-listagem.component';
 
-import { VacinasListagemComponent } from './vacinas-listagem.component';
 
-describe('VacinasListagemComponent', () => {
-  let component: VacinasListagemComponent;
-  let fixture: ComponentFixture<VacinasListagemComponent>;
+
+describe('VacinaListagemComponent', () => {
+  let component: VacinaListagemComponent;
+  let fixture: ComponentFixture<VacinaListagemComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VacinasListagemComponent ]
+      declarations: [ VacinaListagemComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(VacinasListagemComponent);
+    fixture = TestBed.createComponent(VacinaListagemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
