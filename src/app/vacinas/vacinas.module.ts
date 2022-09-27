@@ -5,12 +5,14 @@ import { CommonModule } from '@angular/common';
 
 import { VacinasRoutingModule } from './vacinas-routing.module';
 import { VacinaListagemComponent } from './vacinas-listagem/vacinas-listagem.component';
+import { VacinaDetalheComponent } from './vacina-detalhe/vacina-detalhe.component';
 
 
 
 @NgModule({
   declarations: [
-    VacinaListagemComponent
+    VacinaListagemComponent,
+    VacinaDetalheComponent
   ],
   imports: [
     CommonModule,

@@ -5,7 +5,12 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
-
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -19,7 +24,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatToolbarModule,
     MatProgressSpinnerModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatInputModule,
+    MatRadioModule,
+    MatSelectModule,
+    FormsModule
   ]
 })
 export class AppMaterialModule { }

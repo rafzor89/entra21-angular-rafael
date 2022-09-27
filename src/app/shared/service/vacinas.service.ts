@@ -11,11 +11,15 @@ import { Vacina } from '../app-material/model/vacina';
   providedIn: 'root'
 })
 export class VacinasService {
-  private readonly API = 'localhost:8083/vacina';
+  private readonly API = 'http://localhost:8083/vacina';
 
   constructor(private httpClient: HttpClient) { }
 
   listarTodas(): Observable<Vacina[]>{
     return this.httpClient.get<Vacina[]>(this.API);
+  }
+
+  salvar(vacina: Vacina): Observable<Vacina>{
+    return this.httpClient.post<Vacina>(this.API, vacina);
   }
 }

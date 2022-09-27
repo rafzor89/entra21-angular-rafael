@@ -11,9 +11,12 @@ export class AppComponent {
 
   constructor(private router: Router) { }
 
-
-  public irParaTelaListagemVacinas(){
+   public irParaTelaListagemVacinas(){
     //TODO testar a rota
     this.router.navigate(['/vacinas']);
+  }
+
+  public irParaTelaCadastroVacinas(){
+    this.router.navigate(['/vacinas/detalhe']);
   }
 }
